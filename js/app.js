@@ -12,13 +12,16 @@ $(document).ready(function() {
         // Doing so confirms the target
         if (hexLen != 0) {
             hexToRGB($('#hex').val());
+
         } else if (rgbLen != 0) {
             rgbToHex($('#rgb').val());
-        } else if(cmykLen!=0){
+
+        } else if (cmykLen != 0) {
             cmykToRGB($('#cmyk').val());
+
+        } else {
+            btnText('Too Quick!');
         }
-        else
-            {console.log('Fill');}
 
     });
 
@@ -36,9 +39,10 @@ $(document).ready(function() {
             var red = parseInt((hexVal.substring(0, 2)), 16);
             var green = parseInt((hexVal.substring(2, 4)), 16);
             var blue = parseInt((hexVal.substring(4, 6)), 16);
+            btnText('Hex all the way');
 
-        } else 
-         // Checking if the inputted HEX value is a valid 3
+        } else
+        // Checking if the inputted HEX value is a valid 3
         // digit string
         if (hexVal.match(/([A-Fa-f0-9]{3})/)) {
 
@@ -46,11 +50,11 @@ $(document).ready(function() {
             var red = parseInt((hexVal.charAt(0) + hexVal.charAt(0)), 16);
             var green = parseInt((hexVal.charAt(1) + hexVal.charAt(1)), 16);
             var blue = parseInt((hexVal.charAt(2) + hexVal.charAt(2)), 16);
+            btnText('Hex all the way');
 
         } else {
 
-            console.log('bad');
-
+            btnText('Hexadecimal dude!!');
         }
 
         // Printing the obtained RGB value in the input box
@@ -99,23 +103,23 @@ $(document).ready(function() {
         var r = parseInt(rgb[0]);
         var g = parseInt(rgb[1]);
         var b = parseInt(rgb[2]);
-        rgbToCMYK(r, g, b);
+
         // Checking for valid numbers
         if (rgb[0] < 0 || rgb[1] < 0 || rgb[2] < 0) {
-            console.log("Negative numbers not allowed");
+            btnText('Be positive');
         } else if (rgb[0] > 255 || rgb[1] > 255 || rgb[2] > 255) {
-            console.log("Number greater than 255");
+            btnText('Too far!')
         } else if (isNaN(rgb[0]) || isNaN(rgb[1]) || isNaN(rgb[2])) {
-            console.log("only numbers allowed");
+            btnText('Show me numbers');
         } else {
-
+            rgbToCMYK(r, g, b);
             var hex1 = r.toString(16);
             var hex2 = g.toString(16);
             var hex3 = b.toString(16);
-
+            $('#hex').val('#' + hex1 + hex2 + hex3);
+            btnText('Primary colors eh?');
+            return
         }
-
-        $('#hex').val('#' + hex1 + hex2 + hex3);
     }
 
 
@@ -129,11 +133,32 @@ $(document).ready(function() {
         var y = parseFloat(cmyk[2]);
         var k = parseFloat(cmyk[3]);
 
-        var r = parseInt(255 * (1 - c) * (1 - k));
-        var g = parseInt(255 * (1 - m) * (1 - k));
-        var b = parseInt(255 * (1 - y) * (1 - k));
 
-        $('#rgb').val(r + ',' + g + ',' + b);
-        rgbToHex(r + ',' + g + ',' + b);
+        if (c >= 0 && c <= 1 && m >= 0 && m <= 1 && y >= 0 && y <= 1 && k >= 0 && k <= 1) {
+            var r = parseInt(255 * (1 - c) * (1 - k));
+            var g = parseInt(255 * (1 - m) * (1 - k));
+            var b = parseInt(255 * (1 - y) * (1 - k));
+
+            $('#rgb').val(r + ',' + g + ',' + b);
+            rgbToHex(r + ',' + g + ',' + b);
+            btnText('Mind the key');
+
+        } else {
+            btnText('Invalid Sir');
+        }
+
+
     }
+
+    // Easy copy
+    $('input').click(function(event) {
+        var selected = event.target.id;
+        $(this).select();
+    });
+
+    // Just a fancy message button message
+    function btnText(text) {
+        $('#calc-btn').text(text);
+    }
+
 });
