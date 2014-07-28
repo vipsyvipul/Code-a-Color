@@ -1,0 +1,111 @@
+/****Font Definitions****/
+@font-face {
+    font-family: 'amatic_scregular';
+    src: url('../fonts/amaticsc-regular-webfont.eot');
+    src: url('../fonts/amaticsc-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/amaticsc-regular-webfont.woff') format('woff'),
+         url('../fonts/amaticsc-regular-webfont.ttf') format('truetype'),
+         url('../fonts/amaticsc-regular-webfont.svg#amatic_scregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+html,body{
+	height: 100%;
+	font-size: 100%;
+}
+*:focus{
+	outline-color: rgb(252,130,151);
+}
+
+
+/*Body & Global*/
+body{
+	background-color: rgb(141,82,100);
+}
+
+h1,h3,label,button,input,footer{
+	font-family: 'amatic_scregular';
+}
+
+h1,h3,label{
+	color: rgb(255,255,255);
+}
+
+
+/*Header*/
+header{
+	text-align: center;
+}
+
+h1{
+	font-size: 5rem;
+	font-weight: bold;
+}
+
+h3{
+	font-size: 3rem;
+}
+
+.subtitle{
+	margin-top: -25px;
+}
+
+
+/****Main Input****/
+.main-input{
+	margin-top: 5%;
+	text-align: center;
+}
+
+.row-input{
+	margin-bottom: 3%;
+}
+
+label{
+	font-size: 3.5rem;
+}
+
+input{
+	width: 80%;
+	height: 55px;
+	text-align: center;
+	font-size: 2.2rem;
+	padding: 3px 0;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0px 5px 0px -1px rgb(252,130,151);
+}
+
+button{
+	font-size: 2.8rem;
+	padding: 2px;
+	width: 50%;
+	border-radius: 5px;
+	background-color: rgb(252,130,151);
+}
+
+/****Footer****/
+footer{
+	background-color: rgb(252,130,151);
+	width: 100%;
+}
+
+footer p{
+	margin-bottom: 0;
+	font-size: 1.3rem;
+	color: rgb(255,255,255);
+}
+
+footer a{
+	color: rgb(255,255,255);
+	text-decoration: underline;
+}
+
+footer a:hover{
+	color: rgb(255,255,255);
+	text-decoration: none;
+}
