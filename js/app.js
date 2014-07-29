@@ -39,6 +39,11 @@ $(document).ready(function() {
             var red = parseInt((hexVal.substring(0, 2)), 16);
             var green = parseInt((hexVal.substring(2, 4)), 16);
             var blue = parseInt((hexVal.substring(4, 6)), 16);
+            // Printing the obtained RGB value in the input box
+            $('#rgb').val(red + ',' + green + ',' + blue);
+            // The respective values of RGB will now be used to
+            // obtain its CMYK equivalent
+            rgbToCMYK(red, green, blue);
             btnText('Hex all the way');
 
         } else
@@ -50,19 +55,17 @@ $(document).ready(function() {
             var red = parseInt((hexVal.charAt(0) + hexVal.charAt(0)), 16);
             var green = parseInt((hexVal.charAt(1) + hexVal.charAt(1)), 16);
             var blue = parseInt((hexVal.charAt(2) + hexVal.charAt(2)), 16);
+            // Printing the obtained RGB value in the input box
+            $('#rgb').val(red + ',' + green + ',' + blue);
+            // The respective values of RGB will now be used to
+            // obtain its CMYK equivalent
+            rgbToCMYK(red, green, blue);
             btnText('Hex all the way');
 
         } else {
 
             btnText('Hexadecimal dude!!');
         }
-
-        // Printing the obtained RGB value in the input box
-        $('#rgb').val(red + ',' + green + ',' + blue);
-
-        // The respective values of RGB will now be used to
-        // obtain its CMYK equivalent
-        rgbToCMYK(red, green, blue);
 
     }
 
@@ -156,7 +159,7 @@ $(document).ready(function() {
         $(this).select();
     });
 
-    // Just a fancy message button message
+    // Just a fancy button message
     function btnText(text) {
         $('#calc-btn').text(text);
     }
