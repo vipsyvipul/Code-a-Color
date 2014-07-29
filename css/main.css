@@ -13,7 +13,7 @@
 
 
 
-html,body{
+html{
 	height: 100%;
 	font-size: 100%;
 }
@@ -22,7 +22,7 @@ html,body{
 }
 
 
-/*Body & Global*/
+/****Body & Global****/
 body{
 	background-color: rgb(141,82,100);
 }
@@ -36,7 +36,7 @@ h1,h3,label{
 }
 
 
-/*Header*/
+/****Header****/
 header{
 	text-align: center;
 }
@@ -71,7 +71,7 @@ label{
 
 input{
 	width: 80%;
-	height: 55px;
+	height: 3.6rem;
 	text-align: center;
 	font-size: 2.2rem;
 	padding: 3px 0;
@@ -108,4 +108,11 @@ footer a{
 footer a:hover{
 	color: rgb(255,255,255);
 	text-decoration: none;
+}
+
+/****Screen****/
+@media only screen and (max-width: 480px){
+	html{
+		font-size: 80%;
+	}
 }
