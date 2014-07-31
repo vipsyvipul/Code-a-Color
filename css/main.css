@@ -14,7 +14,6 @@
 
 
 html{
-	height: 100%;
 	font-size: 100%;
 }
 *:focus{
@@ -92,12 +91,14 @@ button{
 footer{
 	background-color: rgb(252,130,151);
 	width: 100%;
+	position: absolute;
+	bottom: 0px;
 }
 
 footer p{
-	margin-bottom: 0;
-	font-size: 1.3rem;
 	color: rgb(255,255,255);
+	font-size: 1.3rem;
+	margin-bottom: 0;
 }
 
 footer a{
@@ -111,8 +112,8 @@ footer a:hover{
 }
 
 /****Screen****/
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 640px){
 	html{
-		font-size: 80%;
+		font-size: 70%;
 	}
 }
