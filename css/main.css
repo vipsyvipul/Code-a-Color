@@ -17,13 +17,13 @@ html{
 	font-size: 100%;
 }
 *:focus{
-	outline-color: rgb(252,130,151);
+	outline-color: rgb(245,86,91);
 }
 
 
 /****Body & Global****/
 body{
-	background-color: rgb(141,82,100);
+	background-color: rgb(135,83,70);
 }
 
 h1,h3,label,button,input,footer{
@@ -76,7 +76,7 @@ input{
 	padding: 3px 0;
 	border-radius: 5px;
 	border: none;
-	box-shadow: 0px 5px 0px -1px rgb(252,130,151);
+	box-shadow: 0px 5px 0px -1px rgb(245,86,91);
 }
 
 button{
@@ -84,12 +84,12 @@ button{
 	padding: 2px;
 	width: 50%;
 	border-radius: 5px;
-	background-color: rgb(252,130,151);
+	background-color: rgb(245,86,91);
 }
 
 /****Footer****/
 footer{
-	background-color: rgb(252,130,151);
+	background-color: rgb(245,86,91);
 	width: 100%;
 	position: absolute;
 	bottom: 0px;
