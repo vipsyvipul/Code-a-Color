@@ -1,119 +1,110 @@
 /****Font Definitions****/
+
 @font-face {
     font-family: 'amatic_scregular';
     src: url('../fonts/amaticsc-regular-webfont.eot');
-    src: url('../fonts/amaticsc-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/amaticsc-regular-webfont.woff') format('woff'),
-         url('../fonts/amaticsc-regular-webfont.ttf') format('truetype'),
-         url('../fonts/amaticsc-regular-webfont.svg#amatic_scregular') format('svg');
+    src: url('../fonts/amaticsc-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amaticsc-regular-webfont.woff') format('woff'), url('../fonts/amaticsc-regular-webfont.ttf') format('truetype'), url('../fonts/amaticsc-regular-webfont.svg#amatic_scregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+/****Global****/
 
+html {
+    font-size: 100%;
 }
 
-
-
-html{
-	font-size: 100%;
-}
-*:focus{
-	outline-color: rgb(245,86,91);
+*:focus {
+    outline-color: rgb(245, 86, 91);
 }
 
-
-/****Body & Global****/
-body{
-	background-color: rgb(135,83,70);
+body {
+    background-color: rgb(135, 83, 70);
 }
 
-h1,h3,label,button,input,footer{
-	font-family: 'amatic_scregular';
+h1,
+h3,
+label,
+button,
+input,
+footer {
+    font-family: 'amatic_scregular';
 }
 
-h1,h3,label{
-	color: rgb(255,255,255);
+h1,
+h3,
+label {
+    color: rgb(255, 255, 255);
 }
-
-
 /****Header****/
-header{
-	text-align: center;
+
+header {
+    text-align: center;
 }
 
-h1{
-	font-size: 5rem;
-	font-weight: bold;
+h1 {
+    font-size: 5rem;
+    font-weight: bold;
 }
 
-h3{
-	font-size: 3rem;
+h3 {
+    font-size: 3rem;
 }
 
-.subtitle{
-	margin-top: -25px;
+.subtitle {
+    margin-top: -25px;
 }
-
-
 /****Main Input****/
-.main-input{
-	margin-top: 5%;
-	text-align: center;
+
+.main-input {
+    margin-top: 2%;
+    text-align: center;
 }
 
-.row-input{
-	margin-bottom: 3%;
+.row-input {
+    margin-bottom: 3%;
 }
 
-label{
-	font-size: 3.5rem;
+label {
+    font-size: 3.5rem;
 }
 
-input{
-	width: 80%;
-	height: 3.6rem;
-	text-align: center;
-	font-size: 2.2rem;
-	padding: 3px 0;
-	border-radius: 5px;
-	border: none;
-	box-shadow: 0px 5px 0px -1px rgb(245,86,91);
+input {
+    width: 80%;
+    height: 3.6rem;
+    text-align: center;
+    font-size: 2.2rem;
+    padding: 3px 0;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0px 5px 0px -1px rgb(245, 86, 91);
 }
 
-button{
-	font-size: 2.8rem;
-	padding: 2px;
-	width: 50%;
-	border-radius: 5px;
-	background-color: rgb(245,86,91);
+button {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    padding: 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(245, 86, 91);
 }
-
 /****Footer****/
-footer{
-	background-color: rgb(245,86,91);
-	width: 100%;
-	position: absolute;
-	bottom: 0px;
+
+footer a {
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
 }
 
-footer p{
-	color: rgb(255,255,255);
-	font-size: 1.3rem;
-	margin-bottom: 0;
+footer a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
-
-footer a{
-	color: rgb(255,255,255);
-	text-decoration: underline;
-}
-
-footer a:hover{
-	color: rgb(255,255,255);
-	text-decoration: none;
-}
-
 /****Screen****/
-@media only screen and (max-width: 640px){
-	html{
-		font-size: 70%;
-	}
+
+@media only screen and (max-width: 640px) {
+    html {
+        font-size: 70%;
+    }
 }
